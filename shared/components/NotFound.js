@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import TopNav from './TopNav';
 
 const style = {
   padding: '16px'

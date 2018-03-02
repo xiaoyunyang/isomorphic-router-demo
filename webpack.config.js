@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'development';
 module.exports = {
   entry: [
     'babel-polyfill',
-    './client/main.jsx',
+    './client/main.js',
   ],
   output: {
     path: __dirname + '/build',
