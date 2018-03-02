@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "env",
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-es2015-destructuring",
+    "transform-es2015-parameters",
+    "transform-object-rest-spread"
+  ]
+}
