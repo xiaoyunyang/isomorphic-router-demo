@@ -4,6 +4,7 @@ import express from 'express';
 import http from 'http';
 import logger from 'morgan';
 import path from 'path';
+import apiVersion1 from './api/api1';
 import renderRouterMiddleware from '../iso-middleware/renderRoute';
 
 require('dotenv').config();
@@ -15,6 +16,8 @@ app.use(logger('short'));
 
 const buildPath = path.join(path.resolve('.'), '/build');
 app.use('/', express.static(buildPath));
+
+app.use('/api', apiVersion1);
 
 app.use(express.static(__dirname));
 app.get('*', renderRouterMiddleware);

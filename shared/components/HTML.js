@@ -3,7 +3,7 @@ import React from 'react';
 const HTML = (props) => (
   <html lang="en">
     <head>
-      <title>All Things Westies</title>
+      <title>Isomorphic Router Demo</title>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"

@@ -61,7 +61,7 @@ Notes:
 	* B6. `routes.js` determines the mapping between routes and the `Home`, `About`, and `NotFound` components.
 
 
-### Isomorphic Webapp Concepts
+## Isomorphic Webapp Concepts
 
 * **Initial Load**:  The HTML that server gets an initial request via a HTTP GET request. The server grabs what it needs to render the HTML, such as data from a database or static assets like images, then sends HTML to the browser.
 * **SPA mode**: After initial load, the page should immediately enters Single Page Application (SPA) mode. In SPA mode:
@@ -80,4 +80,5 @@ Here are some repos and docs that helped me figure out how to set up the project
 
 ## TODOs
 
-- [ ] Add `isomorphic-fetch` example to show app grabbing data from an api endpoint whilst in SPA mode.
+- [X] Add `isomorphic-fetch` example to show app grabbing data from an api endpoint whilst in SPA mode.
+- [ ] Add webpack HMR and React Hot Loader
