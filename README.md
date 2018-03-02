@@ -29,8 +29,7 @@ This is a demo project to show you how to set up an isomorphic webapp using [Rea
 ├── .env
 ├── server
 |  ├── run.js
-|  ├── server.js  <=== A5
-|  └── start-client.js
+|  └── server.js  <=== A5
 ├── shared
 |  ├── App.js   <=== B3
 |  ├── components
@@ -47,19 +46,19 @@ This is a demo project to show you how to set up an isomorphic webapp using [Rea
 Notes:
 
 * Server Render: **A**  
-	1. `webpack.config.js` creates `/build/browser.js` when the app is first built.
-	2. `browser.js` is used in `HTML.js`
-	3. `HTML.js` is a React component used to generate the template HTML that the server sends to the browser when it gets an HTTP `GET` request from the browser (called the initial load).
-	4. `renderRoute.js` renders a static version of the `App` (using the `StaticRouter` as a container) into the HTML template in `HTML.js`, converts everything to string using React's server rendering support, then send the final string version of the HTML to send for HTTP GET request.
-	5. `server.js` responds to the initial load request by getting `renderRoutes` to respond with an HTML.
+	* A1. `webpack.config.js` creates `/build/browser.js` when the app is first built.
+	* A2. `browser.js` is used in `HTML.js`
+	* A3. `HTML.js` is a React component used to generate the template HTML that the server sends to the browser when it gets an HTTP `GET` request from the browser (called the initial load).
+	* A4. `renderRoute.js` renders a static version of the `App` (using the `StaticRouter` as a container) into the HTML template in `HTML.js`, converts everything to string using React's server rendering support, then send the final string version of the HTML to send for HTTP GET request.
+	* A5. `server.js` responds to the initial load request by getting `renderRoutes` to respond with an HTML.
 
 * Client Render: **B**
-	1. `webpack.config.js` identifies the entry point for the client app as `main.js`
-	2. `main.js` renders a SPA version of the app using `BrowserRouter` as container for `App`.
-	3. `App` includes a `TopNav` and a `Main`.
-	4. `TopNav` contains React Router `Link` components, which navigates to the route upon click.
-	5. `Main` contains a React Router `Switch` component, which switches between the `Home`, `About`, and `NotFound` components depending on the route.
-	6. `routes.js` determines the mapping between routes and the `Home`, `About`, and `NotFound` components.
+	* B1. `webpack.config.js` identifies the entry point for the client app as `main.js`
+	* B2. `main.js` renders a SPA version of the app using `BrowserRouter` as container for `App`.
+	* B3. `App` includes a `TopNav` and a `Main`.
+	* B4. `TopNav` contains React Router `Link` components, which navigates to the route upon click.
+	* B5. `Main` contains a React Router `Switch` component, which switches between the `Home`, `About`, and `NotFound` components depending on the route.
+	* B6. `routes.js` determines the mapping between routes and the `Home`, `About`, and `NotFound` components.
 
 
 ### Isomorphic Webapp Concepts
