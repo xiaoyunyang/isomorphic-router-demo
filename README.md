@@ -10,10 +10,17 @@ $ npm install
 $ npm start
 ```
 
+Go to [http://localhost:3000](http://localhost:3000) to get the code up and running
+
 ## Motivation
 
 This is a demo project to show you how to set up an isomorphic webapp using [React Router 4](https://github.com/ReactTraining/react-router) and [`react-router-config`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config).
 
+The app has a few pages:
+
+1. The Home page, which includes two sets of dynamic loading to server APIs to grab JSON data to be displayed on the page. This is achieved via isomorphic-fetch. One isomorphic-fetch returns the same JSON data every time and the other one returns a different JSON each time.
+2. The About page
+3. The NotFound page, which gets rendered anytime an unrecognized route is requested. 
 
 ## App Building Blocks
 
@@ -67,7 +74,7 @@ Notes:
 * **SPA mode**: After initial load, the page should immediately enters Single Page Application (SPA) mode. In SPA mode:
 	* The app can support quick navigation between pages without refreshing the page, and if done right, can even work offline.
 	* Updates are initiated by events, such as mouse clicks or scroll from the user.
-	* Additional data can by grabbed by talking to an API. The server serves up data, usually as JSON, to an api endpoint (RESTful API or GraphQL). 
+	* Additional data can by grabbed by talking to an API. The server serves up data, usually as JSON, to an api endpoint (RESTful API or GraphQL).
 
 ## Resources
 Here are some repos and docs that helped me figure out how to set up the project:
@@ -81,4 +88,7 @@ Here are some repos and docs that helped me figure out how to set up the project
 ## TODOs
 
 - [X] Add `isomorphic-fetch` example to show app grabbing data from an api endpoint whilst in SPA mode.
+- [ ] Add example for redirect with message to the router
 - [ ] Add webpack HMR and React Hot Loader
+- [ ] Add data preloading example
+- [ ] Add redux example

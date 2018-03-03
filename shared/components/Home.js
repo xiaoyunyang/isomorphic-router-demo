@@ -5,8 +5,7 @@ class Home extends React.Component {
     resHello: 'Loading...',
     resQuote: 'Loading...'
   };
-
-  componentDidMount() {
+  componentWillMount() {
     // Get hello message
     this.callApi('/api/hello')
       .then(res => this.setState({ resHello: res.express }))
@@ -31,7 +30,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>This is the Home page</h1>
+        <h1>Home page</h1>
         <h6>
           {`Message from the server: ${this.state.resHello}`}
         </h6>
