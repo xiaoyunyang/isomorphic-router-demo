@@ -13,7 +13,7 @@ class Home extends React.Component {
 
     // Get random quote
     const rand = Math.random();
-    this.callApi(`/api/r/${rand}`)
+    this.callApi(`/api/quote/${rand}`)
       .then(res => this.setState({ resQuote: res.express }))
       .catch(err => console.log(err));
   }

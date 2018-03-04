@@ -26,7 +26,7 @@ api.get('/hello', (req, res) => {
 });
 
 
-api.get('/r/:rand', (req, res) => {
+api.get('/quote/:rand', (req, res) => {
   const rand = parseFloat(req.params.rand);
   if (Number.isNaN(rand)) {
     res.send({ express: 'Bad request.' });
