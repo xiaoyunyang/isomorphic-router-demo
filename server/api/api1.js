@@ -15,7 +15,7 @@ const quotes = [
   'Not life, but good ilfe, is to be chiefly valued. ~ Socrates',
   'It is not in the stars to hold our destiny but in ourselves. ~ William Shakespeare',
   'Experience is not what happens to you; It is what you do with what happens to you. ~ Aldous Huxley',
-  'Failure is a part of success'
+  'Failure is only the opportunity to begin again, only this time more wisely.” ~ Henry Ford'
 ];
 
 // const randomInd = Math.floor(Math.random() * quotes.length);

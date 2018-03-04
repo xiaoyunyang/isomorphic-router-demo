@@ -15,11 +15,7 @@ module.exports = {
         test: /\.(jsx|js|es6)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
-      },
+      }
     ],
   },
   resolve: {

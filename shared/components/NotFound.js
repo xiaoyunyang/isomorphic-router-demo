@@ -1,5 +1,4 @@
 import React from 'react';
-import TopNav from './TopNav';
 
 const style = {
   padding: '16px'
