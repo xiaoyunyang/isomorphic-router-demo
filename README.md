@@ -20,13 +20,13 @@ The app has a few pages:
 
 1. The Home page, which includes two sets of dynamic loading to server APIs to grab JSON data to be displayed on the page. This is achieved via isomorphic-fetch. One isomorphic-fetch returns the same JSON data every time and the other one returns a different JSON each time.
 2. The About page
-3. The NotFound page, which gets rendered anytime an unrecognized route is requested. 
+3. The NotFound page, which gets rendered anytime an unrecognized route is requested.
 
 ## App Building Blocks
 
 ```
 ├── build
-|  └── browser.js   <=== A2
+|  └── main.bundle.js   <=== A2
 ├── client
 |  └── main.js   <=== B2
 ├── iso-middleware
@@ -53,8 +53,8 @@ The app has a few pages:
 Notes:
 
 * Server Render: **A**  
-	* A1. `webpack.config.js` creates `/build/browser.js` when the app is first built.
-	* A2. `browser.js` is used in `HTML.js`
+	* A1. `webpack.config.js` creates `/build/main.bundle.js` when the app is first built.
+	* A2. `main.bundle.js` is used in `HTML.js`
 	* A3. `HTML.js` is a React component used to generate the template HTML that the server sends to the browser when it gets an HTTP `GET` request from the browser (called the initial load).
 	* A4. `renderRoute.js` renders a static version of the `App` (using the `StaticRouter` as a container) into the HTML template in `HTML.js`, converts everything to string using React's server rendering support, then send the final string version of the HTML to send for HTTP GET request.
 	* A5. `server.js` responds to the initial load request by getting `renderRoutes` to respond with an HTML.

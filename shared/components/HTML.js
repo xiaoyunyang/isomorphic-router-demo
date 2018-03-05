@@ -15,13 +15,12 @@ const HTML = (props) => (
         dangerouslySetInnerHTML={{ __html: props.html }}
       />
       <script dangerouslySetInnerHTML={{
-          __html: `
-            window.__SERIALIZED_STATE__ =
-              JSON.stringify(${props.serverState})
-          `
+          __html:
+            `window.__SERIALIZED_STATE__ =
+              JSON.stringify(${props.serverState})`
         }}
       />
-      <script type="application/javascript" src="/browser.js" />
+    <script type="application/javascript" src="/main.bundle.js" />
     </body>
   </html>
 );

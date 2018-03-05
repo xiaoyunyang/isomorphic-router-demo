@@ -14,11 +14,14 @@ const app = express();
 app.set('port', process.env.PORT || 8080);
 app.use(logger('short'));
 
-const buildPath = path.join(path.resolve('.'), '/build');
+// Request Handlers
+
+// const buildPath = path.join(path.resolve('.'), '/build');
+
+const buildPath = path.join(__dirname, '../', 'build');
+
 app.use('/', express.static(buildPath));
-
 app.use('/api', apiVersion1);
-
 app.use(express.static(__dirname));
 app.get('*', renderRouterMiddleware);
 

@@ -1,33 +1,37 @@
 import React from 'react';
+import fetch from 'isomorphic-fetch';
 
 class Home extends React.Component {
-  state = {
-    resHello: 'Loading...',
-    resQuote: 'Loading...'
-  };
-  componentWillMount() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      resHello: 'Loading...',
+      resQuote: 'Loading...'
+    };
+  }
+  componentDidMount() {
     // Get hello message
-    this.callApi('/api/hello')
+    this.callApi('http://localhost:3000/api/hello')
       .then(res => this.setState({ resHello: res.express }))
       .catch(err => console.log(err));
 
     // Get random quote
     const rand = Math.random();
-    this.callApi(`/api/quote/${rand}`)
+    this.callApi(`http://localhost:3000/api/quote/${rand}`)
       .then(res => this.setState({ resQuote: res.express }))
       .catch(err => console.log(err));
   }
-
-  callApi = async (endpoint) => {
+  async callApi(endpoint) {
     const response = await fetch(endpoint);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
 
     return body;
-  };
+  }
 
   render() {
+    console.log('rendering: Home');
     return (
       <div className="container">
         <h1>Home page</h1>
