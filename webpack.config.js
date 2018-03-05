@@ -3,10 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: [
-      'babel-polyfill',
-      './client/main.js'
-    ]
+    main: './client/main.js'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
