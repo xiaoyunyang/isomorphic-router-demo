@@ -6,13 +6,6 @@ import routes from '../shared/routes';
 import HTML from '../shared/components/HTML';
 import App from '../shared/App';
 
-/**
- * [renderRoute description]
- * @param  {[type]}   req  [description]
- * @param  {[type]}   res  [description]
- * @param  {Function} next [description]
- * @return {[type]}        [description]
- */
 export default function renderRoute(req, res) {
   const branch = matchRoutes(routes, req.url);
   const promises = [];

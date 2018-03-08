@@ -21,7 +21,7 @@ class Home extends React.Component {
       .then(res => this.setState({ resQuote: res.express }))
       .catch(err => console.log(err));
   }
-  async callApi(endpoint) {
+  callApi = async function (endpoint) {
     const response = await fetch(endpoint);
     const body = await response.json();
 

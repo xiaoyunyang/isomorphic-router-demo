@@ -77,7 +77,7 @@ Notes:
 	* Additional data can by grabbed by talking to an API. The server serves up data, usually as JSON, to an api endpoint (RESTful API or GraphQL).
 
 ## Resources
-Here are some repos and docs that helped me figure out how to set up the project:
+Here are some repos and tutorials that helped me figure out how to set up the project:
 
 * [technology-ebay-de/universal-react-router4](https://github.com/technology-ebay-de/universal-react-router4/tree/master/src/shared)
 * [zacfukuda/universal-app-react-router](https://github.com/zacfukuda/universal-app-react-router)
@@ -87,7 +87,7 @@ Here are some repos and docs that helped me figure out how to set up the project
 
 ## TODOs
 
-- [X] Add `isomorphic-fetch` example to show app grabbing data from an api endpoint whilst in SPA mode.
+- [X] Add `isomorphic-fetch` example to show app grabbing data from an api endpoint while in SPA mode.
 - [ ] Add example for redirect with message to the router
 - [ ] Add webpack HMR and React Hot Loader
 - [ ] Add data preloading example
