@@ -12,6 +12,8 @@ $ npm start
 
 Go to [http://localhost:3000](http://localhost:3000) to get the code up and running
 
+To learn more about this repo and what an isomorphic app: [https://hackernoon.com/get-an-isomorphic-web-app-up-and-running-in-5-minutes-72da028c15dd](https://hackernoon.com/get-an-isomorphic-web-app-up-and-running-in-5-minutes-72da028c15dd)  
+
 ## Motivation
 
 This is a demo project to show you how to set up an isomorphic webapp using [React Router 4](https://github.com/ReactTraining/react-router) and [`react-router-config`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config).
