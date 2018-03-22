@@ -86,6 +86,7 @@ Here are some repos and tutorials that helped me figure out how to set up the pr
 * [React Router training on server rendering](https://reacttraining.com/react-router/web/guides/server-rendering)
 * [isomorphic-dev-js](https://github.com/isomorphic-dev-js/complete-isomorphic-example)
 * [EmileCantin's blog](https://blog.emilecantin.com/web/react/javascript/2017/05/16/ssr-react-router-4-webpack-code-split.html)
+* Elyse Kolker Gordon's Slides: [SlideShare](https://www.slideshare.net/ElyseKolkerGordon/building-universal-web-apps-with-react-72715124) / [GoogleDoc](https://docs.google.com/presentation/d/1zxF2wvvOxctqqt78ho5D2lCKkU8R2X0wcY_O8TIbVGA/pub?start=false&loop=false&delayms=10000)
 
 ## TODOs
 

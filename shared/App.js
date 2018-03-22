@@ -1,12 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import TopNav from './components/TopNav';
-import Main from './components/Main';
+import { renderRoutes } from 'react-router-config';
+import routes from './routes';
 
 const App = () => (
   <div>
-    <TopNav />
-    <Main />
+    {renderRoutes(routes)}
   </div>
 );
 

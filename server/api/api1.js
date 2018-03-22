@@ -18,7 +18,7 @@ const quotes = [
   'Failure is only the opportunity to begin again, only this time more wisely.” ~ Henry Ford'
 ];
 
-// const randomInd = Math.floor(Math.random() * quotes.length);
+// a random index between 0 and quotes.length
 const randomInd = (rand) =>  Math.floor(rand * quotes.length);
 
 api.get('/hello', (req, res) => {
