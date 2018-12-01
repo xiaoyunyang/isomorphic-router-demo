@@ -1,4 +1,5 @@
 import React from 'react';
+// import chalk from 'chalk';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { matchRoutes } from 'react-router-config';
@@ -27,6 +28,8 @@ export default function renderRoute(req, res) {
     const app = renderToString(router);
 
     const html = renderToString(<HTML html={app} />);
+
+    // console.log(chalk.green(`<!DOCTYPE html>${html}`));
 
     return res.send(`<!DOCTYPE html>${html}`);
   });
